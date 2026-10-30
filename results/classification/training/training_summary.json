@@ -1,0 +1,12 @@
+{
+  "selected_stage": "layer4",
+  "selected_checkpoint": "resnet50_layer4_best.pth",
+  "best_head_roc_auc": 0.7316090838509317,
+  "best_layer4_roc_auc": 0.8227387422360248,
+  "target_resolution": [
+    1024,
+    640
+  ],
+  "batch_size": 4,
+  "seed": 42
+}

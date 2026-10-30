@@ -1,0 +1,14 @@
+{
+  "model": "ResNet50UNet",
+  "checkpoint": "resnet50_unet_layer4_best.pth",
+  "checkpoint_stage": "layer4_finetune",
+  "selected_epoch": 3,
+  "validation_soft_dice": 0.3567443701690268,
+  "selected_threshold": 0.9000000000000001,
+  "validation_dice_at_selected_threshold": 0.3770005702972412,
+  "validation_iou_at_selected_threshold": 0.2743273079395294,
+  "threshold_selection_dataset": "validation",
+  "threshold_selection_metric": "mean per-image Dice",
+  "test_set_used": false,
+  "status": "Final segmentation model and probability threshold locked. Ready for one-time held-out test evaluation."
+}

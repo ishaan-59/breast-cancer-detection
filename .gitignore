@@ -1,24 +1,35 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .venv/
 venv/
 
-# macOS
-.DS_Store
-
-# Jupyter
+# Notebooks and editors
 .ipynb_checkpoints/
-
-# Dataset
-data/raw/
-data/processed/*
-!data/processed/*.csv
-
-# Model checkpoints
-models/*.pt
-models/*.pth
-
-# IDE
+.DS_Store
 .idea/
 .vscode/
+
+# Data and generated caches
+data/raw/
+data/processed/
+processed/
+CBIS-DDSM/
+cbis_ddsm_model_ready_1024x640/
+*.dcm
+*.dicom
+*.npy
+
+# Model weights and experiment archives
+models/*.pth
+models/*.pt
+models/*.ckpt
+*.zip
+
+# Local outputs
+inference.png
+artifacts/

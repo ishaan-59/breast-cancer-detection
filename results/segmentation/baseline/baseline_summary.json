@@ -1,0 +1,12 @@
+{
+  "model": "Vanilla U-Net",
+  "checkpoint": "unet_best.pth",
+  "selected_epoch": 11,
+  "validation_soft_dice": 0.15318969758963624,
+  "selected_threshold": 0.8,
+  "validation_dice_at_selected_threshold": 0.20657916367053986,
+  "validation_iou_at_selected_threshold": 0.14062978327274323,
+  "threshold_selection_dataset": "validation",
+  "test_set_used": false,
+  "status": "Baseline preserved. Test evaluation deferred while improved segmentation model is explored."
+}

@@ -1,0 +1,50 @@
+{
+  "architecture": "ResNet50UNet",
+  "encoder": "ResNet-50",
+  "encoder_initialization": "ImageNet pretrained ResNet-50 fine-tuned on CBIS-DDSM malignancy classification",
+  "input_resolution": [
+    1024,
+    640
+  ],
+  "input_channels": 3,
+  "segmentation_output_channels": 1,
+  "batch_size": 1,
+  "loss": {
+    "bce_weight": 0.3,
+    "dice_weight": 0.7,
+    "positive_weight": 8.056278504807254
+  },
+  "seed": 42,
+  "stage_a": {
+    "name": "decoder_only",
+    "encoder_frozen": true,
+    "decoder_lr": 0.0003,
+    "weight_decay": 1e-05,
+    "best_epoch": 6,
+    "best_validation_soft_dice": 0.3329135484901581,
+    "validation_hard_dice_at_0_5": 0.3542922331172371,
+    "validation_iou_at_0_5": 0.2499364732734469,
+    "checkpoint": "resnet50_unet_decoder_best.pth"
+  },
+  "stage_b": {
+    "name": "layer4_finetune",
+    "layer4_unfrozen": true,
+    "batchnorm_frozen": true,
+    "layer4_lr": 1e-05,
+    "decoder_lr": 0.0001,
+    "weight_decay": 1e-05,
+    "best_epoch": 3,
+    "best_validation_soft_dice": 0.3570995714772103,
+    "validation_hard_dice_at_0_5": 0.3692520217276818,
+    "validation_iou_at_0_5": 0.2642834049642278,
+    "checkpoint": "resnet50_unet_layer4_best.pth"
+  },
+  "selected_model": "stage_b",
+  "selected_checkpoint": "resnet50_unet_layer4_best.pth",
+  "selected_validation_soft_dice": 0.3570995714772103,
+  "selected_validation_hard_dice_at_0_5": 0.3692520217276818,
+  "selected_validation_iou_at_0_5": 0.2642834049642278,
+  "segmentation_threshold_selected": false,
+  "test_set_used": false,
+  "notes": "Stage A trained only the decoder with the classifier-trained ResNet-50 encoder frozen. Stage B unfroze layer4 using a smaller learning rate while keeping BatchNorm frozen. Final checkpoint selected using validation soft Dice. Threshold selection and final test evaluation are deferred to the evaluation notebook."
+}

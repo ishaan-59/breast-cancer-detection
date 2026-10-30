@@ -1,0 +1,9 @@
+{
+  "model": "ResNet50 classifier",
+  "checkpoint": "resnet50_layer4_best.pth",
+  "target_layer": "layer4[-1]",
+  "cam_threshold": 0.5,
+  "test_images": 394,
+  "interpretation": "Correct malignant predictions showed greater Grad-CAM overlap with annotated lesion ROIs than false negatives or benign predictions. Mass lesions showed stronger ROI alignment than calcifications. Overall attention remained diffuse, so Grad-CAM should be interpreted as qualitative classifier attention rather than precise lesion localization.",
+  "notes": "Grad-CAM analysis used the final locked classifier checkpoint. No model retraining or threshold tuning was performed."
+}

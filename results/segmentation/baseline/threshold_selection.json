@@ -1,0 +1,11 @@
+{
+  "model_checkpoint": "unet_best.pth",
+  "selected_epoch": 11,
+  "selection_dataset": "validation",
+  "selection_metric": "mean per-image Dice",
+  "selected_threshold": 0.8,
+  "validation_soft_dice": 0.15318969758963624,
+  "validation_dice_at_selected_threshold": 0.20657916367053986,
+  "validation_iou_at_selected_threshold": 0.14062978327274323,
+  "test_set_used": false
+}

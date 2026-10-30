@@ -1,0 +1,19 @@
+{
+  "classifier_checkpoint": "resnet50_layer4_best.pth",
+  "segmentation_checkpoint": "resnet50_unet_layer4_best.pth",
+  "classifier_threshold": 0.29150390625,
+  "segmentation_threshold": 0.9,
+  "input_resolution": [
+    1024,
+    640
+  ],
+  "example_image_key": "P_00408_RIGHT_CC",
+  "example_ground_truth_pathology": "MALIGNANT",
+  "example_abnormality_type": "mass",
+  "example_output": {
+    "malignancy_probability": 0.21264301240444183,
+    "predicted_class": "non-malignant",
+    "predicted_lesion_pixels": 4526
+  },
+  "pipeline": "High-resolution mammogram -> ResNet-50 malignancy classifier -> Grad-CAM explanation -> ResNet50-U-Net lesion segmentation -> combined visualization"
+}

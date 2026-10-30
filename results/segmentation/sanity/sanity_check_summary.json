@@ -1,0 +1,15 @@
+{
+  "experiment": "single_image_segmentation_overfit",
+  "status": "PASS",
+  "input_resolution": [
+    1024,
+    640
+  ],
+  "architecture": "U-Net",
+  "base_channels": 32,
+  "samples": 1,
+  "best_epoch": 38,
+  "best_dice": 0.952583372592926,
+  "best_iou": 0.9094600677490234,
+  "target_dice": 0.95
+}

@@ -1,0 +1,35 @@
+{
+  "selection_dataset": "validation",
+  "selection_method": "maximum Youden J (sensitivity + specificity - 1)",
+  "selected_threshold": 0.29150390625,
+  "validation_metrics_at_0.5": {
+    "threshold": 0.5,
+    "roc_auc": 0.8227387422360248,
+    "pr_auc": 0.7825812087882176,
+    "accuracy": 0.7352941176470589,
+    "balanced_accuracy": 0.7171972049689441,
+    "precision": 0.8166666666666667,
+    "sensitivity": 0.532608695652174,
+    "specificity": 0.9017857142857143,
+    "f1": 0.6447368421052632,
+    "tn": 202,
+    "fp": 22,
+    "fn": 86,
+    "tp": 98
+  },
+  "validation_metrics_at_selected_threshold": {
+    "threshold": 0.29150390625,
+    "roc_auc": 0.8227387422360248,
+    "pr_auc": 0.7825812087882176,
+    "accuracy": 0.7524509803921569,
+    "balanced_accuracy": 0.7473796583850931,
+    "precision": 0.7398843930635838,
+    "sensitivity": 0.6956521739130435,
+    "specificity": 0.7991071428571429,
+    "f1": 0.7170868347338936,
+    "tn": 179,
+    "fp": 45,
+    "fn": 56,
+    "tp": 128
+  }
+}

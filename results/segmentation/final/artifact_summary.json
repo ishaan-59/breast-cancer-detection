@@ -1,0 +1,46 @@
+{
+  "project_component": "lesion_segmentation",
+  "model": "ResNet50UNet",
+  "checkpoint": "resnet50_unet_layer4_best.pth",
+  "selected_epoch": 3,
+  "threshold": 0.9000000000000001,
+  "threshold_selected_on": "validation",
+  "test_images": 394,
+  "final_test_metrics": {
+    "n_images": 394,
+    "mean_soft_dice": 0.349320959276239,
+    "mean_dice": 0.3694631594787148,
+    "median_dice": 0.3662576228380203,
+    "mean_iou": 0.2698958679667079,
+    "median_iou": 0.22421281784772873,
+    "mean_precision": 0.4329377337661601,
+    "mean_recall": 0.44136928919945645
+  },
+  "patient_bootstrap_95_ci": {
+    "mean_dice": {
+      "lower_95": 0.33624484025342355,
+      "upper_95": 0.4038961316042253
+    },
+    "mean_iou": {
+      "lower_95": 0.2435915802446914,
+      "upper_95": 0.29785688191072685
+    },
+    "mean_precision": {
+      "lower_95": 0.39311609720796237,
+      "upper_95": 0.47512993786005114
+    },
+    "mean_recall": {
+      "lower_95": 0.3991867558793141,
+      "upper_95": 0.48350716911312647
+    }
+  },
+  "test_inference_runs": 1,
+  "important_results": {
+    "mean_dice": 0.3694631594787148,
+    "median_dice": 0.3662576228380203,
+    "mean_iou": 0.2698958679667079,
+    "mean_precision": 0.4329377337661601,
+    "mean_recall": 0.44136928919945645
+  },
+  "notes": "Final segmentation model, epoch, and probability threshold were locked before held-out test inference. Test inference was performed once. Subgroup, lesion-size, bootstrap, and qualitative analyses were generated from saved test outputs."
+}

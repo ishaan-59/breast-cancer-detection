@@ -1,0 +1,45 @@
+{
+  "project": "CBIS-DDSM Breast Cancer Classification",
+  "architecture": "ResNet-50",
+  "pretrained_weights": "ResNet50_Weights.DEFAULT",
+  "selected_stage": "layer4",
+  "checkpoint": "resnet50_layer4_best.pth",
+  "task": "binary malignancy classification",
+  "class_mapping": {
+    "0": "non-malignant",
+    "1": "malignant"
+  },
+  "input": {
+    "height": 1024,
+    "width": 640,
+    "channels": 3,
+    "source_dtype": "uint16",
+    "scaling": "divide by 65535",
+    "grayscale_to_rgb": true
+  },
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "training": {
+    "batch_size": 4,
+    "seed": 42,
+    "head_learning_rate": 0.001,
+    "layer4_learning_rate": 1e-05,
+    "fc_finetune_learning_rate": 0.0001,
+    "weight_decay": 0.0001
+  },
+  "validation": {
+    "best_head_roc_auc": 0.7316090838509317,
+    "best_layer4_roc_auc": 0.8227387422360248
+  },
+  "notes": "Model architecture and checkpoint selected using validation ROC-AUC. Classification threshold has not yet been selected. The held-out test set has not yet been used for final evaluation."
+}
